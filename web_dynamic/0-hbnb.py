@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Starts a Flash Web Application """
+""" Starts a Flask Web Application """
 from models import storage
 from models.state import State
 from models.city import City
@@ -37,11 +37,11 @@ def hbnb():
     # Add a variable cache_id to the render_template
     cache_id = str(uuid.uuid4())
 
-    return render_template('100-hbnb.html',
+    return render_template('0-hbnb.html',
                            states=st_ct,
                            amenities=amenities,
-                           places=places)
-                           cache_id=cache_id) #pass cache_id to the template
+                           places=places,
+                           cache_id=cache_id)  # pass cache_id to the template
 
 
 if __name__ == "__main__":
